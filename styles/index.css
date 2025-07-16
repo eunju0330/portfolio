@@ -293,7 +293,10 @@ main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wra
 .redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_image img {}
 .redesign_wrap#redesign .swiper#redesign-swiper .swiper-scrollbar {}
 /* 4. GRAPHIC */
-.graphic_wrap#graphic {}
+.graphic_wrap#graphic {
+    height:1000px;
+    background-color:palegoldenrod;
+}
 .graphic_wrap#graphic .graphic_title {}
 .graphic_wrap#graphic .graphic_title h2 {}
 .graphic_wrap#graphic .graphic_title .line {}
@@ -301,15 +304,22 @@ main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wra
 .graphic_wrap#graphic .graphic_group {}
 .graphic_wrap#graphic .graphic_group h3 {}
 .graphic_wrap#graphic .graphic_group .swiper#sns_swiper {}
-.graphic_wrap#graphic .graphic_group .swiper#sns_swiper .swiper-wrapper {}
+.graphic_wrap#graphic .graphic_group .swiper#sns_swiper .swiper-wrapper {
+    display:flex;
+}
 .graphic_wrap#graphic .graphic_group .swiper#sns_swiper .swiper-wrapper .swiper-slide {}
 .graphic_wrap#graphic .graphic_group .swiper#sns_swiper .swiper-wrapper .swiper-slide img {}
 .graphic_wrap#graphic .graphic_group .swiper#banner-swiper {}
-.graphic_wrap#graphic .graphic_group .swiper#banner-swiper .swiper-wrapper {}
+.graphic_wrap#graphic .graphic_group .swiper#banner-swiper .swiper-wrapper {
+    display:flex;
+}
 .graphic_wrap#graphic .graphic_group .swiper#banner-swiper .swiper-wrapper .swiper-slide {}
 .graphic_wrap#graphic .graphic_group .swiper#banner-swiper .swiper-wrapper .swiper-slide img {}
 /* 5. DETAIL */
-.detail_wrap#detail {}
+.detail_wrap#detail {
+    height:1050px;
+    background-color:salmon;
+}
 .detail_wrap#detail .detail_title {}
 .detail_wrap#detail .detail_title h2 {}
 .detail_wrap#detail .detail_title .line {}
@@ -323,7 +333,10 @@ main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wra
 .detail_wrap#detail .detail_group .mockup .swiper#detail-swiper .swiper-wrapper .swiper-slide {}
 .detail_wrap#detail .detail_group .mockup .swiper#detail-swiper .swiper-wrapper .swiper-slide img {}
 /* 6. OUTRO */
-.outro_wrap#outro {}
+.outro_wrap#outro {
+    background:url(../images/outro/outro_bg.jpg);
+    height:1000px;
+}
 .outro_wrap#outro .outro_inner {}
 .outro_wrap#outro .outro_inner img {}
 .outro_wrap#outro .outro_inner h2 {}
