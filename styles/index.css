@@ -1,0 +1,260 @@
+body, html {scroll-behavior:smooth;}
+.right_nav {
+    position:fixed; right:54px; top:50%; transform:translateY(-50%);
+    text-align:right;
+    z-index:999;
+}
+.right_nav a {
+    display:block;
+    margin-bottom:20px;
+    display:flex;
+    justify-content:flex-end;
+}
+.right_nav a:hover em {display:block;}
+.right_nav a em {display:none;}
+.right_nav a:hover span {background-color: #FEE42F;}
+.right_nav a span {
+    width:20px; height:20px; background-color:#F0F0F0;
+    border-radius:50%;
+    margin-left:15px;
+}
+.wrap {}
+.wrap main {}
+main .intro_wrap {
+    background-image:url(../images/Intro/intro_bg.jpg);
+    background-repeat:no-repeat;
+    height:100vh;
+    width:100%;
+    
+}
+main .about_wrap {
+    width:1442px;
+    margin:123px 239px 122px;
+}
+/* about 1행 */
+main .about_wrap .profile_section {}
+main .about_wrap .profile_section .profile_info {
+    display: flex;
+    flex-flow:row nowrap;
+    align-items:center;
+}
+main .about_wrap .profile_section .profile_info .profile_image {
+    width:310px; height:310px;
+    position:relative;
+}
+main .about_wrap .profile_section .profile_image img {
+    
+}
+main .about_wrap .profile_section .profile_image::after {
+    content:'';
+    width:10px; height:10px; background-color:#FEE430;
+    border-radius:50%;
+    z-index:20;
+    position:absolute; left:55px; top:49px;
+}
+main .about_wrap .profile_section .profile_image::before {
+    content:'';
+    width:10px; height:10px; background-color:#FFF39F;
+    border-radius:50%;
+    z-index:20;
+    position:absolute; right:-6px; top:50%;
+}
+main .about_wrap .profile_section .profile_info .info_section {
+    margin-left:96px;
+}
+main .about_wrap .profile_section .profile_info .info_section .text_wrap {
+    display:flex;
+    align-items:end;
+}
+.info_section .introduce {
+    display:flex; flex-direction:column;
+}
+main .about_wrap .profile_section .profile_info .info_section .text_wrap .introduce .name {}
+main .about_wrap .profile_section .profile_info .info_section .text_wrap .introduce .name h2 {
+    margin-top:20px;
+    margin-bottom:22px;
+    font-size:1.563rem;
+}
+main .about_wrap .profile_section .profile_info .info_section .text_wrap .info_grid {
+    display:grid;
+    grid-template-columns: 65px 1fr;
+    row-gap:21px;
+    column-gap:21px;
+    margin-right:59px;
+}
+main .about_wrap .profile_section .profile_info .info_section .text_wrap .info_grid .label {
+    font-size:1.063rem;
+    color:#888;
+    font-weight:500;
+}
+main .about_wrap .profile_section .profile_info .info_section .text_wrap .info_grid .value {
+    font-size:1.063rem;
+    font-weight:500;
+}
+main .about_wrap .profile_section .profile_info .info_section .text_wrap .sunflower {
+    margin-right:145px;
+}
+main .about_wrap .profile_section .profile_info .info_section .text_wrap .sunflower p {
+    font-size:1.125rem;
+    line-height:2;
+}
+main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap {
+    text-align:center;
+}
+main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .bubble {
+    position:relative;
+}
+main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .bubble img {}
+    
+main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .bubble span {
+    position:absolute; left:31px; top:11px;
+    color:#fff;
+}
+main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .qr {
+    margin-top:20px;
+}
+main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .qr img {}
+/* about 2행 */
+.about_wrap .info {
+    height:450px; width:1440px;
+    display:flex;
+    gap:33px;
+    margin-top:45px;
+}
+.about_wrap .info .info_box {
+    border:1px solid #d9d9d9;
+    box-shadow:2px 2px 3px 0px rgba(0, 0, 0, 0.25);
+    border-radius:30px;
+    width:458px; height:450px;
+    padding:47px 34px;
+}
+.about_wrap .info .info_box h2 {
+    margin-bottom:23px;
+    line-height:1.7;
+    font-size:1.25rem;
+    font-weight:500;
+}
+.about_wrap .info .info_box .info_list {
+    background-color:red;
+}
+.about_wrap .info .info_box .info_list li {
+    display:grid;
+    grid-template-columns:60px 1fr;
+    row-gap:15px;
+    column-gap:18px;
+    margin-bottom:15px;
+}
+.about_wrap .info .info_box .keywords {
+}
+.about_wrap .info .info_box .keywords span {
+    background:#272727;
+    border-radius:20px;
+    width:90px; height:35px;
+    color:#fff;
+    padding:11px 29px 10px 28px;
+    font-size:0.875rem;
+    font-weight:500;
+}
+.info .box1 {margin-bottom:30px;}
+.info .box2 {}
+.about_wrap .info .info_box .box2 h2 {}
+.about_wrap .info .info_box .box2 .skill_icons {
+    height:169px;
+    display:flex;
+    flex-flow:column;
+    justify-content:space-between;
+}
+.about_wrap .info .info_box .box2 .skill_icons .sk1 {
+    margin-bottom:15px;
+    display:flex;
+    gap:11px;
+    width:261px;
+}
+.about_wrap .info .info_box .box2 .skill_icons .sk1 .sk_box {
+    display:flex;
+    flex-flow:column;
+    text-align:center;
+    height:55px;
+    width:77px;
+}
+.about_wrap .info .info_box .box2 .skill_icons .sk1 .sk_box img {
+    margin-bottom:5px;
+}
+
+.about_wrap .info .info_box .box2 .skill_icons .sk_box span {
+    font-weight:300;
+    font-size:0.625rem;
+}
+
+.about_wrap .info .info_box .box2 .skill_icons .sk2 {
+    display:flex;
+    gap:14px;
+    width:193px;
+    height:77px;
+}
+.about_wrap .info .info_box .box2 .skill_icons .sk2 .sk_box {
+    display:flex;
+    flex-flow:column;
+    text-align:center;
+    height:55px;
+    width:77px;
+}
+.about_wrap .info .info_box .box2 .skill_icons .sk2 .sk_box img {
+    margin-bottom:5px;
+    
+}
+.about_wrap .info .info_box .box2 .skill_icons .sk2 .sk_box span {}
+.about_wrap .info .info_box .info_list li .date {
+    font-weight:500;
+    color:#888;
+}
+.box1_height .info_list li span {
+    line-height:1.7;
+}
+.about_wrap .info .info_box .info_list li .end {
+    font-weight:500;
+    
+}
+/* 3. REDESIGN */
+.redesign_wrap#redesign {
+    height:950px;
+    background:cornflowerblue;
+}
+.redesign_wrap#redesign .swiper#redesign-swiper {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .project_top {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .project_top .project_num {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .project_top .project_num span {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .project_top .project_num img {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .project_top .project_topic {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .project_top .project_topic .category {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .project_top .project_topic .title {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .overview {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .overview .icon_title {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .overview .icon_title img {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .overview .icon_title h3 {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .overview p {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .details {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .details li {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .details li .icon_title {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .details li .icon_title img {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .details li .icon_title strong {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .details li > span {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .details li > strong {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .project_btn {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .project_btn .btn {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_image {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_image img {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-scrollbar {}
+/* 4. GRAPHIC */
+.graphic_wrap#graphic {}
+.graphic_wrap#graphic h2 {}
+.graphic_wrap#graphic .line {}
+.graphic_wrap#graphic .cat {}
+.graphic_wrap#graphic .graphic_group {}
+.graphic_wrap#graphic .graphic_group h3 {}
+.graphic_wrap#graphic .graphic_group .swiper#sns_swiper {}
+.graphic_wrap#graphic .graphic_group .swiper#sns_swiper .swiper-wrapper {}
+.graphic_wrap#graphic .graphic_group .swiper#sns_swiper .swiper-wrapper .swiper-slide {}

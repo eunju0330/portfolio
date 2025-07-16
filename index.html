@@ -13,89 +13,139 @@
 <body>
     <!-- 우측 고정 메뉴 -->
     <div class="right_nav">
-        <a href="#"><em>Intro</em><span></span></a>
-        <a href="#"><em>About Me</em><span></span></a>
-        <a href="#"><em>Redesign</em><span></span></a>
-        <a href="#"><em>Graphic</em><span></span></a>
-        <a href="#"><em>Detail</em><span></span></a>
+        <a href="#intro"><em>Intro</em><span></span></a>
+        <a href="#aboutme"><em>About Me</em><span></span></a>
+        <a href="#redesign"><em>Redesign</em><span></span></a>
+        <a href="#graphic"><em>Graphic</em><span></span></a>
+        <a href="#detail"><em>Detail</em><span></span></a>
+        <a href="#outro"><em>Outro</em><span></span></a>
     </div>
     <!-- 메인 시작 -->
     <div id="wrap">
         <main>
             <!-- 1. INTRO -->
-            <section class="intro_bg"></section>
+            <section class="intro_wrap" id="intro"></section>
             <!-- 2. ABOUT -->
-            <section class="about">
+            <section class="about_wrap" id="aboutme">
                 <!-- about 1행 -->
                 <div class="profile_section">
-                    <div class="profile-image">
-                        <img src="#" alt="최은주 프로필 사진">
-                    </div>
                     <div class="profile_info">
-                        <h1>CHOI EUN JU</h1>
-                        <ul>
-                            <li><strong>BIRTH</strong> 1999. 03. 30</li>
-                            <li><strong>PHONE</strong> 010 2446 7386</li>
-                            <li><strong>EMAIL</strong> ehdgmd12@naver.com</li>
-                            <li><strong>GITHUB</strong><a href="https://github.com/eunju0330" target="_blank">https://github.com/eunju0330</a></li>
-                        </ul>
-                        <p class="sunflower">
-                            해바라기는 해를 따라 자라며,<br>언젠가 활짝 피기 위한 시간을 보냅니다.<br>저 역시 디자이너로서의 길 위에서<br>차근차근 제 안의 가능성을 키워가겠습니다.
-                        </p>
-                    </div>
-                    <div class="qr">
-                        <img src="#" alt="말풍선">
-                        <span>TALK Now!</span>
-                        <img src="#" alt="QR코드">
+                        <div class="profile_image">
+                            <img src="./images/about/eunju.png" alt="최은주 프로필 사진">
+                        </div>
+                        <div class="info_section">
+                            <div class="text_wrap">
+                                <div class="introduce">
+                                    <div class="name">
+                                        <h2>CHOI EUN JU</h2>
+                                    </div>
+                                    <div class="info_grid">
+                                        <div class="label">BIRTH</div>
+                                        <div class="value">1999. 03. 30</div>
+                                        <div class="label">PHONE</div>
+                                        <div class="value">010 2446 7386</div>
+                                        <div class="label">EMAIL</div>
+                                        <div class="value">ehdgmd12@naver.com</div>
+                                        <div class="label">GITHUB</div>
+                                        <div class="value"><a href="#">https://github.com/eunju0330</a></div>
+                                    </div>
+                                </div>
+                                <div class="sunflower">
+                                    <p>해바라기는 해를 따라 자라며,<br>언젠가 활짝 피기 위한 시간을 보냅니다.<br>저 역시 디자이너로서의 길 위에서<br>차근차근 제 안의 가능성을 키워가겠습니다.</p>
+                                </div>
+                                <div class="qr_wrap">
+                                    <div class="bubble">
+                                        <img src="./images/about/bubble.png" alt="말풍선">
+                                        <span>TALK Now!</span>
+                                    </div>
+                                    <div class="qr">
+                                        <img src="./images/about/qr.png" alt="QR코드">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- about 2행 -->
                 <div class="info">
                     <article class="info_box">
-                        <h2>Education</h2>
-                        <ul class="info_list">
-                            <li>
-                                <span class="date">2020.02</span>
-                                <span class="finish">김포대학교 졸업</span>
-                            </li>
-                            <li>
-                                <span class="date">2018.02</span>
-                                <span class="finish">작전여자고등학교 졸업</span>
-                            </li>
-                        </ul>
-                        <h2>Skill</h2>
-                        <div class="skill_icons">
-                            <img src="ps.png" alt="Photoshop">
-                            <img src="ai.png" alt="Illustrator">
-                            <img src="pr.png" alt="Premiere">
-                            <img src="figma.png" alt="Figma">
-                            <img src="html.png" alt="HTML">
-                            <img src="css.png" alt="CSS">
-                            <img src="js.png" alt="JavaScript">
+                        <div class="box1">
+                            <h2>Education</h2>
+                            <ul class="info_list">
+                                <li>
+                                    <div class="date">2020.02</div>
+                                    <div class="end">김포대학교 졸업</div>
+                                </li>
+                                <li>
+                                    <div class="date">2018.02</div>
+                                    <div class="end">작전여자고등학교 졸업</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="box2">
+                            <h2>Skill</h2>
+                            <div class="skill_icons">
+                                <div class="sk1">
+                                    <div class="sk_box">
+                                        <img src="./images/about/ps.png" alt="Photoshop">
+                                        <span>포토샵</span>
+                                    </div>
+                                    <div class="sk_box">
+                                        <img src="./images/about/ai.png" alt="Illustrator">
+                                        <span>일러스트</span>
+                                    </div>
+                                    <div class="sk_box">
+                                        <img src="./images/about/pr.png" alt="Premiere">
+                                        <span>프리미어프로</span>
+                                    </div>
+                                    <div class="sk_box">
+                                        <img src="./images/about/figma.png" alt="Figma">
+                                        <span>피그마</span>
+                                    </div>
+                                </div>
+                                <div class="sk2">
+                                    <div class="sk_box">
+                                        <img src="./images/about/html.png" alt="HTML">
+                                        <span>HTML</span>
+                                    </div>
+                                    <div class="sk_box">
+                                        <img src="./images/about/css.png" alt="CSS">
+                                        <span>CSS</span>
+                                    </div>
+                                    <div class="sk_box">
+                                        <img src="./images/about/js.png" alt="JavaScript">
+                                        <span>JS</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </article>
                     <article class="info_box">
-                        <h2>Training</h2>
-                        <ul class="info_list">
-                            <li>
-                                <span class="date">2025.08</span>
-                                <span class="end">[디지털디자인] UI/UX 프론트엔드 웹디자인&퍼블리셔 A과정 수료</span>
-                            </li>
-                            <li>
-                                <span class="date">2024.12</span>
-                                <span class="end">시각디자인(포토샵+일러+GTQ자격) 수료</span>
-                            </li>
-                            <li>
-                                <span class="date">2022.06</span>
-                                <span class="end">3D 모션그래픽 전문가 수료</span>
-                            </li>
-                        </ul>
-                        <h2>Keywords</h2>
-                        <div class="keywords">
-                            <span>#차분함</span>
-                            <span>#열정</span>
-                            <span>#미소</span>
-                            <span>#꾸준함</span>
+                        <div class="box1 box1_height">
+                            <h2>Training</h2>
+                            <ul class="info_list">
+                                <li>
+                                    <span class="date">2025.08</span>
+                                    <span class="end">[디지털디자인] UI/UX 프론트엔드 웹디자인&퍼블리셔 A과정 수료</span>
+                                </li>
+                                <li>
+                                    <span class="date">2024.12</span>
+                                    <span class="end">시각디자인(포토샵+일러+GTQ자격) 수료</span>
+                                </li>
+                                <li>
+                                    <span class="date">2022.06</span>
+                                    <span class="end">3D 모션그래픽 전문가 수료</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="box2">
+                            <h2>Keywords</h2>
+                            <div class="keywords">
+                                <span>#차분함</span>
+                                <span>#열정</span>
+                                <span>#미소</span>
+                                <span>#꾸준함</span>
+                            </div>
                         </div>
                     </article>
                     <article class="info_box">
@@ -134,7 +184,7 @@
                 </div>
             </section>
             <!-- 3. REDESIGN -->
-            <section class="redesign">
+            <section class="redesign_wrap" id="redesign">
                 <div class="swiper" id="redesign-swiper">
                     <div class="swiper-wrapper">
                         <!-- 슬라이드1 -->
@@ -144,7 +194,7 @@
                                     <div class="project_top">
                                         <div class="project_num">
                                             <span>01</span>
-                                            <img src="#" alt="">
+                                            <img src="./images/redesign/Star_001.png" alt="">
                                         </div>
                                         <div class="project_topic">
                                             <p class="category">Web Design</p>
@@ -197,7 +247,7 @@
                 </div>
             </section>
             <!-- 4. GRAPHIC -->
-            <section class="graphic">
+            <section class="graphic_wrap" id="graphic">
                 <h2>GRAPHIC DESIGN</h2>
                 <div class="line"></div>
                 <p class="cat">상세페이지, 배너, SNS광고, 포스터</p>
@@ -212,7 +262,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="graphic">
+                <div class="graphic_group">
                     <h3>BANNER</h3>
                     <div class="swiper" id="banner-swiper">
                         <div class="swiper-wrapper">
@@ -225,22 +275,22 @@
                 </div>
             </section>
             <!-- 5. DETAIL -->
-            <section class="detail">
+            <section class="detail_wrap" id="detail">
                 <h2>DETAIL PAGE DESIGN</h2>
                 <div class="line"></div>
                 <p class="cat">랜딩페이지, 상세페이지</p>
-                <div class="detail-wrap">
+                <div class="detail_group">
                     <div class="mockup">
                         <div class="swiper" id="detail-swiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="#" alt="랜딩페이지">
+                                    <img src="./images/detail/mockup001.jpg" alt="랜딩페이지">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="#" alt="귤 상세페이지">
+                                    <img src="./images/detail/mockup002.jpg" alt="귤 상세페이지">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="#" alt="상세페이지2">
+                                    <img src="./images/detail/mockup003.jpg" alt="사과 상세페이지">
                                 </div>
                             </div>
                             <div class="swiper-button-prev"></div>
@@ -250,11 +300,11 @@
                 </div>
             </section>
             <!-- 6. OUTRO -->
-            <section class="outro">
-                <div class="outro-inner">
+            <section class="outro_wrap" id="outro">
+                <div class="outro_inner">
                     <img src="#" alt="햇님 아이콘">
                     <h2>Thank you for watching!</h2>
-                    <p class="thank">포트폴리오를 끝까지 확인해주셔서 감사합니다!</p>
+                    <p class="thanks">포트폴리오를 끝까지 확인해주셔서 감사합니다!</p>
                     <p class="subtext">지금까지, 성장의 방향을 향해 나아가는 신입 디자이너 <strong>‘최은주’</strong> 였습니다.<br>두려움보다 배움의 의지를 담아, 매 순간 최선을 다하겠습니다.</p>
                 </div>
             </section>
