@@ -32,9 +32,10 @@ main .about_wrap {
     margin:123px 239px 122px;
 }
 /* about 1행 */
-main .about_wrap .profile_section {}
+main .about_wrap .profile_section {
+}
 main .about_wrap .profile_section .profile_info {
-    display: flex;
+    display:flex;
     flex-flow:row nowrap;
     align-items:center;
 }
@@ -42,17 +43,17 @@ main .about_wrap .profile_section .profile_info .profile_image {
     width:310px; height:310px;
     position:relative;
 }
-main .about_wrap .profile_section .profile_image img {
+main .about_wrap .profile_section .profile_info .profile_image img {
     
 }
-main .about_wrap .profile_section .profile_image::after {
+main .about_wrap .profile_section .profile_info .profile_image::after {
     content:'';
     width:10px; height:10px; background-color:#FEE430;
     border-radius:50%;
     z-index:20;
     position:absolute; left:55px; top:49px;
 }
-main .about_wrap .profile_section .profile_image::before {
+main .about_wrap .profile_section .profile_info .profile_image::before {
     content:'';
     width:10px; height:10px; background-color:#FFF39F;
     border-radius:50%;
@@ -66,7 +67,7 @@ main .about_wrap .profile_section .profile_info .info_section .text_wrap {
     display:flex;
     align-items:end;
 }
-.info_section .introduce {
+main .about_wrap .profile_section .profile_info .info_section .text_wrap .introduce {
     display:flex; flex-direction:column;
 }
 main .about_wrap .profile_section .profile_info .info_section .text_wrap .introduce .name {}
@@ -77,8 +78,8 @@ main .about_wrap .profile_section .profile_info .info_section .text_wrap .introd
 }
 main .about_wrap .profile_section .profile_info .info_section .text_wrap .info_grid {
     display:grid;
-    grid-template-columns: 65px 1fr;
-    row-gap:21px;
+    grid-template-columns:65px 1fr;
+    row-gap:18px;
     column-gap:21px;
     margin-right:59px;
 }
@@ -89,10 +90,13 @@ main .about_wrap .profile_section .profile_info .info_section .text_wrap .info_g
 }
 main .about_wrap .profile_section .profile_info .info_section .text_wrap .info_grid .value {
     font-size:1.063rem;
-    font-weight:500;
+}
+main .about_wrap .profile_section .profile_info .info_section .text_wrap .info_grid .value a {
+    font-size:1.063rem;
 }
 main .about_wrap .profile_section .profile_info .info_section .text_wrap .sunflower {
     margin-right:145px;
+    margin-bottom:-5px;
 }
 main .about_wrap .profile_section .profile_info .info_section .text_wrap .sunflower p {
     font-size:1.125rem;
@@ -116,7 +120,6 @@ main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wra
 main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .qr img {}
 /* about 2행 */
 .about_wrap .info {
-    height:450px; width:1440px;
     display:flex;
     gap:33px;
     margin-top:45px;
@@ -126,135 +129,204 @@ main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wra
     box-shadow:2px 2px 3px 0px rgba(0, 0, 0, 0.25);
     border-radius:30px;
     width:458px; height:450px;
-    padding:47px 34px;
+    padding-top:47px; padding-left:34px;
+}
+.about_wrap .info .info_box:nth-child(2) {
+    padding-right:34px;
 }
 .about_wrap .info .info_box h2 {
-    margin-bottom:23px;
-    line-height:1.7;
     font-size:1.25rem;
     font-weight:500;
+    margin-bottom:23px;
 }
-.about_wrap .info .info_box .info_list {
-    background-color:red;
+.about_wrap .info .info_box .Education_wrap {
+    margin-bottom:50px;
 }
-.about_wrap .info .info_box .info_list li {
+.about_wrap .info .info_box .Education_wrap h2 {}
+.about_wrap .info .info_box .Education_wrap .info_list {}
+.about_wrap .info .info_box .Education_wrap .info_list li {
     display:grid;
-    grid-template-columns:60px 1fr;
-    row-gap:15px;
-    column-gap:18px;
-    margin-bottom:15px;
+    grid-template-columns:66px auto;
+    column-gap:15px;
+    margin-bottom:26px;
 }
-.about_wrap .info .info_box .keywords {
+.about_wrap .info .info_box .Education_wrap .info_list li .date {}
+.about_wrap .info .info_box .Education_wrap .info_list li .end {}
+.about_wrap .info .info_box .skill_wrap {
 }
-.about_wrap .info .info_box .keywords span {
-    background:#272727;
-    border-radius:20px;
-    width:90px; height:35px;
-    color:#fff;
-    padding:11px 29px 10px 28px;
-    font-size:0.875rem;
-    font-weight:500;
-}
-.info .box1 {margin-bottom:30px;}
-.info .box2 {}
-.about_wrap .info .info_box .box2 h2 {}
-.about_wrap .info .info_box .box2 .skill_icons {
-    height:169px;
-    display:flex;
-    flex-flow:column;
-    justify-content:space-between;
-}
-.about_wrap .info .info_box .box2 .skill_icons .sk1 {
-    margin-bottom:15px;
-    display:flex;
-    gap:11px;
-    width:261px;
-}
-.about_wrap .info .info_box .box2 .skill_icons .sk1 .sk_box {
-    display:flex;
-    flex-flow:column;
-    text-align:center;
-    height:55px;
-    width:77px;
-}
-.about_wrap .info .info_box .box2 .skill_icons .sk1 .sk_box img {
-    margin-bottom:5px;
-}
+.about_wrap .info .info_box .skill_wrap h2 {}
+.about_wrap .info .info_box .skill_wrap .skill_icons {
 
-.about_wrap .info .info_box .box2 .skill_icons .sk_box span {
-    font-weight:300;
-    font-size:0.625rem;
 }
-
-.about_wrap .info .info_box .box2 .skill_icons .sk2 {
-    display:flex;
-    gap:14px;
-    width:193px;
-    height:77px;
-}
-.about_wrap .info .info_box .box2 .skill_icons .sk2 .sk_box {
-    display:flex;
-    flex-flow:column;
-    text-align:center;
-    height:55px;
-    width:77px;
-}
-.about_wrap .info .info_box .box2 .skill_icons .sk2 .sk_box img {
-    margin-bottom:5px;
+.about_wrap .info .info_box .skill_wrap .skill_icons .sk_box {
     
 }
-.about_wrap .info .info_box .box2 .skill_icons .sk2 .sk_box span {}
+.about_wrap .info .info_box .skill_wrap .skill_icons .sk_box img {
+    width:55px; height:55px;
+    
+}
+.about_wrap .info .info_box .skill_wrap .skill_icons .sk_box span {
+    font-size:0.688rem;
+}
+.about_wrap .info .info_box .skill_wrap .skill_icons .sk1 {
+    margin-bottom:15px;
+    display:flex;
+    gap:15px;
+}
+.about_wrap .info .info_box .skill_wrap .skill_icons .sk1 .sk_box {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:5px;
+}
+.about_wrap .info .info_box .skill_wrap .skill_icons .sk1 .sk_box img {}
+.about_wrap .info .info_box .skill_wrap .skill_icons .sk1 .sk_box span {}
+.about_wrap .info .info_box .skill_wrap .skill_icons .sk2 {
+    margin-bottom:15px;
+    display:flex;
+    gap:15px;
+}
+.about_wrap .info .info_box .skill_wrap .skill_icons .sk2 .sk_box {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:5px;
+}
+.about_wrap .info .info_box .skill_wrap .skill_icons .sk2 .sk_box img {}
+.about_wrap .info .info_box .skill_wrap .skill_icons .sk2 .sk_box span {}
+/* 2번째 박스 */
+.about_wrap .info .info_box .traning_wrap {
+    margin-bottom:31px;
+}
+.about_wrap .info .info_box .traning_wrap h2 {}
+.about_wrap .info .info_box .traning_wrap .info_list {}
+.about_wrap .info .info_box .traning_wrap .info_list li {
+    display:grid;
+    grid-template-columns:66px auto;
+    column-gap:21px;
+    margin-bottom:15px;
+}
+.about_wrap .info .info_box .traning_wrap .info_list li .date {
+    line-height:1.7;
+}
+.about_wrap .info .info_box .traning_wrap .info_list li .end {
+    line-height:1.7;
+}
+.about_wrap .info .info_box .keywords_wrap {}
+.about_wrap .info .info_box .keywords_wrap h2 {}
+.about_wrap .info .info_box .keywords_wrap .keywords {}
+.about_wrap .info .info_box .keywords_wrap .keywords span {
+    background:#272727; color:#fff;
+    border-radius:20px;
+    font-size:0.875rem; font-weight:500;
+    padding:11px 23px 10px 22px;
+    display:inline-block;
+    margin-right:10px;
+}
+.about_wrap .info .info_box .keywords_wrap .keywords span:last-child {
+    margin-right:0;
+}
+/* 3번째 박스 */
+.about_wrap .info .info_box .license_wrap {}
+.about_wrap .info .info_box .license_wrap h2 {}
+.about_wrap .info .info_box .license_wrap .info_list {}
+.about_wrap .info .info_box .license_wrap .info_list li {
+    display:grid;
+    grid-template-columns:65px auto;
+    gap:32px;
+    margin-bottom:26px;
+}
+.about_wrap .info .info_box .license_wrap .info_list li .date {}
+.about_wrap .info .info_box .license_wrap .info_list li .end {}
+/* 공통 li */
+/* .about_wrap .info .info_box .info_list li {
+    display:grid;
+    grid-template-columns:66px auto;
+    column-gap:18px;
+    margin-bottom:15px;
+} */
+.about_wrap .info .info_box .info_list li:last-child {
+    margin-bottom:0;
+}
+/* 공통 end,date */
 .about_wrap .info .info_box .info_list li .date {
     font-weight:500;
     color:#888;
-}
-.box1_height .info_list li span {
-    line-height:1.7;
+    font-size:1.063rem;
 }
 .about_wrap .info .info_box .info_list li .end {
-    font-weight:500;
-    
+    font-size:1.063rem;
 }
 /* 3. REDESIGN */
 .redesign_wrap#redesign {
     height:950px;
-    background:cornflowerblue;
+    background-color:skyblue;
 }
 .redesign_wrap#redesign .swiper#redesign-swiper {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .project_top {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .project_top .project_num {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .project_top .project_num span {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .project_top .project_num img {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .project_top .project_topic {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .project_top .project_topic .category {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .project_top .project_topic .title {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .overview {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .overview .icon_title {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .overview .icon_title img {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .overview .icon_title h3 {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .overview p {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .details {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .details li {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .details li .icon_title {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .details li .icon_title img {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .details li .icon_title strong {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .details li > span {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .details li > strong {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .project_btn {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_info .project_btn .btn {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_image {}
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-slide .project .project_image img {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .project_top {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .project_top .project_num {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .project_top .project_num span {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .project_top .project_num img {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .project_top .project_topic {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .project_top .project_topic .category {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .project_top .project_topic .title {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .overview {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .overview .icon_title {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .overview .icon_title img {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .overview .icon_title h3 {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .overview p {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .details {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .details .star {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .details .star img {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .details .desc {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .details .desc .redesign_desc {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .details .desc .redesign_desc h3 {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .details .desc .details_contents {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .details .desc .details_contents span {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .project_btn {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .project_btn .btn {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_image {}
+.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_image img {}
 .redesign_wrap#redesign .swiper#redesign-swiper .swiper-scrollbar {}
 /* 4. GRAPHIC */
 .graphic_wrap#graphic {}
-.graphic_wrap#graphic h2 {}
-.graphic_wrap#graphic .line {}
-.graphic_wrap#graphic .cat {}
+.graphic_wrap#graphic .graphic_title {}
+.graphic_wrap#graphic .graphic_title h2 {}
+.graphic_wrap#graphic .graphic_title .line {}
+.graphic_wrap#graphic .graphic_title .cat {}
 .graphic_wrap#graphic .graphic_group {}
 .graphic_wrap#graphic .graphic_group h3 {}
 .graphic_wrap#graphic .graphic_group .swiper#sns_swiper {}
 .graphic_wrap#graphic .graphic_group .swiper#sns_swiper .swiper-wrapper {}
 .graphic_wrap#graphic .graphic_group .swiper#sns_swiper .swiper-wrapper .swiper-slide {}
+.graphic_wrap#graphic .graphic_group .swiper#sns_swiper .swiper-wrapper .swiper-slide img {}
+.graphic_wrap#graphic .graphic_group .swiper#banner-swiper {}
+.graphic_wrap#graphic .graphic_group .swiper#banner-swiper .swiper-wrapper {}
+.graphic_wrap#graphic .graphic_group .swiper#banner-swiper .swiper-wrapper .swiper-slide {}
+.graphic_wrap#graphic .graphic_group .swiper#banner-swiper .swiper-wrapper .swiper-slide img {}
+/* 5. DETAIL */
+.detail_wrap#detail {}
+.detail_wrap#detail .detail_title {}
+.detail_wrap#detail .detail_title h2 {}
+.detail_wrap#detail .detail_title .line {}
+.detail_wrap#detail .detail_title .cat {}
+.detail_wrap#detail .detail_group {}
+.detail_wrap#detail .detail_group .mockup {}
+.detail_wrap#detail .detail_group .mockup .swiper#detail-swiper {}
+.detail_wrap#detail .detail_group .mockup .swiper#detail-swiper .swiper-button-prev {}
+.detail_wrap#detail .detail_group .mockup .swiper#detail-swiper .swiper-button-next {}
+.detail_wrap#detail .detail_group .mockup .swiper#detail-swiper .swiper-wrapper {}
+.detail_wrap#detail .detail_group .mockup .swiper#detail-swiper .swiper-wrapper .swiper-slide {}
+.detail_wrap#detail .detail_group .mockup .swiper#detail-swiper .swiper-wrapper .swiper-slide img {}
+/* 6. OUTRO */
+.outro_wrap#outro {}
+.outro_wrap#outro .outro_inner {}
+.outro_wrap#outro .outro_inner img {}
+.outro_wrap#outro .outro_inner h2 {}
+.outro_wrap#outro .outro_inner .thanks {}
+.outro_wrap#outro .outro_inner .subtext {}
+.outro_wrap#outro .outro_inner .subtext strong {}
