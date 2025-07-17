@@ -1,4 +1,14 @@
-body, html {scroll-behavior:smooth;}
+html, body {
+    height:100%;
+    overflow:hidden;
+    scroll-behavior:smooth;
+}
+#wrap {
+    height:100%;
+}
+.swiper-slide {
+    height:100vh;
+}
 .right_nav {
     position:fixed; right:54px; top:50%; transform:translateY(-50%);
     text-align:right;
@@ -20,104 +30,104 @@ body, html {scroll-behavior:smooth;}
 }
 .wrap {}
 .wrap main {}
-main .intro_wrap {
+.intro_wrap {
     background-image:url(../images/Intro/intro_bg.jpg);
     background-repeat:no-repeat;
     height:100vh;
     width:100%;
-    
+    margin-bottom:150px;
 }
-main .about_wrap {
-    width:1442px;
-    margin:123px 239px 122px;
+.about_wrap {
+    height:100vh; width:100%;
+    padding:50px 239px 112px;
 }
 /* about 1행 */
-main .about_wrap .profile_section {
+.about_wrap .profile_section {
 }
-main .about_wrap .profile_section .profile_info {
+.about_wrap .profile_section .profile_info {
     display:flex;
     flex-flow:row nowrap;
     align-items:center;
 }
-main .about_wrap .profile_section .profile_info .profile_image {
+.about_wrap .profile_section .profile_info .profile_image {
     width:310px; height:310px;
     position:relative;
 }
-main .about_wrap .profile_section .profile_info .profile_image img {
+.about_wrap .profile_section .profile_info .profile_image img {
     
 }
-main .about_wrap .profile_section .profile_info .profile_image::after {
+.about_wrap .profile_section .profile_info .profile_image::after {
     content:'';
     width:10px; height:10px; background-color:#FEE430;
     border-radius:50%;
     z-index:20;
     position:absolute; left:55px; top:49px;
 }
-main .about_wrap .profile_section .profile_info .profile_image::before {
+.about_wrap .profile_section .profile_info .profile_image::before {
     content:'';
     width:10px; height:10px; background-color:#FFF39F;
     border-radius:50%;
     z-index:20;
     position:absolute; right:-6px; top:50%;
 }
-main .about_wrap .profile_section .profile_info .info_section {
+.about_wrap .profile_section .profile_info .info_section {
     margin-left:96px;
 }
-main .about_wrap .profile_section .profile_info .info_section .text_wrap {
+.about_wrap .profile_section .profile_info .info_section .text_wrap {
     display:flex;
     align-items:end;
 }
-main .about_wrap .profile_section .profile_info .info_section .text_wrap .introduce {
+.about_wrap .profile_section .profile_info .info_section .text_wrap .introduce {
     display:flex; flex-direction:column;
 }
-main .about_wrap .profile_section .profile_info .info_section .text_wrap .introduce .name {}
-main .about_wrap .profile_section .profile_info .info_section .text_wrap .introduce .name h2 {
+.about_wrap .profile_section .profile_info .info_section .text_wrap .introduce .name {}
+.about_wrap .profile_section .profile_info .info_section .text_wrap .introduce .name h2 {
     margin-top:20px;
     margin-bottom:22px;
     font-size:1.563rem;
 }
-main .about_wrap .profile_section .profile_info .info_section .text_wrap .info_grid {
+.about_wrap .profile_section .profile_info .info_section .text_wrap .info_grid {
     display:grid;
     grid-template-columns:65px 1fr;
     row-gap:18px;
     column-gap:21px;
     margin-right:59px;
 }
-main .about_wrap .profile_section .profile_info .info_section .text_wrap .info_grid .label {
+.about_wrap .profile_section .profile_info .info_section .text_wrap .info_grid .label {
     font-size:1.063rem;
     color:#888;
     font-weight:500;
 }
-main .about_wrap .profile_section .profile_info .info_section .text_wrap .info_grid .value {
+.about_wrap .profile_section .profile_info .info_section .text_wrap .info_grid .value {
     font-size:1.063rem;
 }
-main .about_wrap .profile_section .profile_info .info_section .text_wrap .info_grid .value a {
+.about_wrap .profile_section .profile_info .info_section .text_wrap .info_grid .value a {
     font-size:1.063rem;
 }
-main .about_wrap .profile_section .profile_info .info_section .text_wrap .sunflower {
+.about_wrap .profile_section .profile_info .info_section .text_wrap .sunflower {
     margin-right:145px;
     margin-bottom:-5px;
 }
-main .about_wrap .profile_section .profile_info .info_section .text_wrap .sunflower p {
+.about_wrap .profile_section .profile_info .info_section .text_wrap .sunflower p {
     font-size:1.125rem;
     line-height:2;
 }
-main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap {
+.about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap {
     text-align:center;
 }
-main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .bubble {
+.about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .bubble {
     position:relative;
 }
-main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .bubble img {}
+.about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .bubble img {}
     
-main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .bubble span {
+.about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .bubble span {
     position:absolute; left:31px; top:11px;
     color:#fff;
 }
-main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .qr {
+.about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .qr {
     margin-top:20px;
 }
-main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .qr img {}
+.about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .qr img {}
 /* about 2행 */
 .about_wrap .info {
     display:flex;
@@ -263,13 +273,10 @@ main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wra
 }
 /* 3. REDESIGN */
 .redesign_wrap#redesign {
-    height:950px;
-    padding-top:145px;
-    
+    height:100vh;
+    padding:138px 233px;
 }
 .redesign_wrap#redesign .swiper#redesign-swiper {
-    margin-left:233px;
-    width:1454px;
 }
 .redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper {
     display:flex;
@@ -298,7 +305,7 @@ main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wra
 .redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .project_top .project_num img {
 }
 .redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .project_top .project_num span {
-    position:absolute; top:31.33px; left:47px;
+    position:absolute; top:32px; left:47px;
     z-index:10;
     font-size:1.563rem;
     font-weight:600;
@@ -381,8 +388,8 @@ main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wra
 }
 .redesign_wrap#redesign .swiper#redesign-swiper .swiper-scrollbar {
     height:2px;
-    width:1400px;
-    background-color:#888;
+    width:1440px;
+    background-color:#ccc;
     position:relative;
 }
 .redesign_wrap#redesign .swiper#redesign-swiper .swiper-scrollbar .swiper-scrollbar-drag {
@@ -393,7 +400,9 @@ main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wra
 /* 4. GRAPHIC */
 .graphic_wrap#graphic {
     height:1000px;
-    padding:133px 240.54px 84px;
+    padding:74px 240.5px 143px;
+}
+.graphic_wrap#graphic .graphic_inner {
 }
 .graphic_wrap#graphic .graphic_title {
     margin-bottom:84px;
@@ -411,28 +420,22 @@ main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wra
 .graphic_wrap#graphic .graphic_title .cat {}
 .graphic_wrap#graphic .graphic_group {
     margin-bottom:46px;
+    height:auto;
 }
 .graphic_wrap#graphic .graphic_group h3 {
     font-weight:500;
     font-size:1.25rem;
     margin-bottom:30px;
 }
-.graphic_wrap#graphic .graphic_group .swiper#sns_swiper {
-}
+.graphic_wrap#graphic .graphic_group .swiper#sns_swiper {}
 .graphic_wrap#graphic .graphic_group .swiper#sns_swiper .swiper-wrapper {
 }
-.graphic_wrap#graphic .graphic_group .swiper#sns_swiper .swiper-wrapper .swiper-slide {
-}
-.graphic_wrap#graphic .graphic_group .swiper#sns_swiper .swiper-wrapper .swiper-slide img {
-}
-.graphic_wrap#graphic .graphic_group .swiper#banner-swiper {
-}
-.graphic_wrap#graphic .graphic_group .swiper#banner-swiper .swiper-wrapper {
-}
-.graphic_wrap#graphic .graphic_group .swiper#banner-swiper .swiper-wrapper .swiper-slide {
-}
-.graphic_wrap#graphic .graphic_group .swiper#banner-swiper .swiper-wrapper .swiper-slide img {
-}
+.graphic_wrap#graphic .graphic_group .swiper#sns_swiper .swiper-wrapper .swiper-slide {}
+.graphic_wrap#graphic .graphic_group .swiper#sns_swiper .swiper-wrapper .swiper-slide img {}
+.graphic_wrap#graphic .graphic_group .swiper#banner-swiper {}
+.graphic_wrap#graphic .graphic_group .swiper#banner-swiper .swiper-wrapper {}
+.graphic_wrap#graphic .graphic_group .swiper#banner-swiper .swiper-wrapper .swiper-slide {}
+.graphic_wrap#graphic .graphic_group .swiper#banner-swiper .swiper-wrapper .swiper-slide img {}
 /* 스와이퍼 공통 */
 .graphic_wrap#graphic .graphic_group .swiper {
     width:100%;
@@ -442,7 +445,7 @@ main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wra
     display:flex;
 }
 .graphic_wrap#graphic .graphic_group .swiper .swiper-wrapper .swiper-slide {
-    width:auto;
+    height:auto;
 }
 .graphic_wrap#graphic .graphic_group .swiper .swiper-wrapper .swiper-slide img {
     display:block;
@@ -479,21 +482,44 @@ main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wra
 .popup_bg .popup img {
     width:100%;
 }
-/* 5. DETAIL */ /* 선택자변경 */
+/* 5. DETAIL */
 .detail_wrap#detail {
-    height:1050px;
-    background-color:salmon;
+    padding:50px 241px 132px;
+    height:1000px;
 }
-.detail_wrap#detail .detail_title {}
-.detail_wrap#detail .detail_title h2 {}
-.detail_wrap#detail .detail_title .line {}
-.detail_wrap#detail .detail_title .cat {}
-.detail_wrap#detail .detail_group {}
-.detail_wrap#detail .detail_group .mockup {}
-.detail_wrap#detail .detail_group .mockup .swiper#detail-swiper {}
-.detail_wrap#detail .detail_group .mockup .swiper#detail-swiper .swiper-button-prev {}
-.detail_wrap#detail .detail_group .mockup .swiper#detail-swiper .swiper-button-next {}
+.detail_wrap#detail .detail_top {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:58px;
+}
+.detail_wrap#detail .detail_top .detail_title {
+    display:flex;
+    align-items:center;
+    gap:22px;
+}
+.detail_wrap#detail .detail_top .detail_title h2 {
+    font-size:2.5rem;
+    font-weight:600;
+}
+.detail_wrap#detail .detail_top .detail_title .line {
+    width:33px; height:1px; background-color:#000;
+}
+.detail_wrap#detail .detail_top .detail_title .cat {}
+.detail_wrap#detail .detail_top .detail_btn_wrap {
+}
+.detail_wrap#detail .detail_top .detail_btn_wrap .detail_prev {
+    margin-right:44px;
+}
+.detail_wrap#detail .detail_top .detail_btn_wrap .detail_next {}
+.detail_wrap#detail .detail_group {
+}
+.detail_wrap#detail .detail_group .mockup {
+}
+.detail_wrap#detail .detail_group .mockup .swiper#detail-swiper {
+}
 .detail_wrap#detail .detail_group .mockup .swiper#detail-swiper .swiper-wrapper {
+    display:flex;
 }
 .detail_wrap#detail .detail_group .mockup .swiper#detail-swiper .swiper-wrapper .swiper-slide {
 }
@@ -501,9 +527,14 @@ main .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wra
 /* 6. OUTRO */
 .outro_wrap#outro {
     background:url(../images/outro/outro_bg.jpg);
-    height:1000px;
+    height:100vh;
+    position:relative;
 }
-.outro_wrap#outro .outro_inner {}
+.outro_wrap#outro .outro_inner {
+    background-color:yellowgreen;
+    text-align:center;
+    position:absolute; top:50%; left:50%; transform:translate(-50% , -50%);
+}
 .outro_wrap#outro .outro_inner img {}
 .outro_wrap#outro .outro_inner h2 {}
 .outro_wrap#outro .outro_inner .thanks {}

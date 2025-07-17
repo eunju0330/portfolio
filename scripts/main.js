@@ -1,3 +1,13 @@
+const wrap = new Swiper('#wrap',{
+    direction:'vertical',
+    mousewheel:{
+        sensitivity:1,
+        releaseOnEdges:true,
+    },
+    speed:900,
+    simulateTouch:false,
+});
+
 new Swiper('#redesign-swiper', {
     loop: true, // 🔁 루프 켜기
     slidesPerView: 1,
@@ -10,7 +20,7 @@ new Swiper('#redesign-swiper', {
 });
 
 //그래픽디자인
-const sns = new Swiper('.graphic_group .swiper#sns_swiper',{ //css에서 wrapper에 linear줘서 일정하게 흘러가게 할 수 있다.
+const sns = new Swiper('.graphic_group .swiper#sns-swiper',{
     slidesPerView:4,
     spaceBetween:25,
     autoplay:{delay:0,},
@@ -18,7 +28,7 @@ const sns = new Swiper('.graphic_group .swiper#sns_swiper',{ //css에서 wrapper
     loop:true,
 })
 
-const bnr = new Swiper('.graphic_group .swiper#banner-swiper',{ //css에서 wrapper에 linear줘서 일정하게 흘러가게 할 수 있다.
+const bnr = new Swiper('.graphic_group .swiper#banner-swiper',{
     slidesPerView:4,
     spaceBetween:25,
     autoplay:{delay:0,},
@@ -27,23 +37,43 @@ const bnr = new Swiper('.graphic_group .swiper#banner-swiper',{ //css에서 wrap
 })
 
 //SNS 프로젝트 클릭 시 팝업 실행(클릭한 이미지가 팝업 이미지로 교체)
-const snsProject = document.querySelectorAll('#sns_swiper .swiper-slide');
+const snsProject = document.querySelectorAll('#sns-swiper .swiper-slide');
+const bannerProject = document.querySelectorAll('#banner-swiper .swiper-slide');
 const popup = document.querySelector('.popup_bg');
-console.log(snsProject,popup); //4개뜨는지확인
+const popupImg = document.querySelector('.popup_bg .popup img');
+/* 모든슬라이드이미지 */
+const allSlides = document.querySelectorAll('#sns-swiper .swiper-slide img, #banner-swiper .swiper-slide img');
 
 //팝업 열 때
-for(let sns of snsProject){ //만든 변수4개를 sns에 반복으로 담겠다.
-    sns.addEventListener('click',()=>{
-        popup.style.display = 'block'; //none->block
-        //클릭한 이미지 경로 - 스와이프슬라이드 안에 있는 img의 src를 나오게 하고싶음
-        popup.children[0].children[0].src = sns.children[0].src; //.popup_bg의 변수 popup, for문으로 했으니 몇개를 추가하든 다 이걸로 동작함.
-        //팝업 실행 시 전체 수직 Swiper 스크롤 기능 막기
-        wrap.mousewheel.disable(); //비활성화=disable //스크롤 풀기 enable() //wrap은 맨 위에서 만든 것
-    })
-}
+allSlides.forEach(img => {
+    img.addEventListener('click', () => {
+        const realSrc = img.dataset.popup || img.src;
+        popupImg.src = realSrc;
+        popup.style.display = 'block';
+        wrap.mousewheel.disable();
+    });
+});
 
-//이제 popup_bg 닫히는 거 할 차례
+//popup_bg 닫힘
 popup.addEventListener('click',()=>{
     popup.style.display='none'
     wrap.mousewheel.enable();
 })
+
+//detail 슬라이드
+const detail = new Swiper('.swiper#detail-swiper',{
+    loop:true,
+    speed:300,
+});
+const detailNextBtn = document.querySelector('.detail_btn_wrap .detail_next');
+const detailPrevBtn = document.querySelector('.detail_btn_wrap .detail_prev');
+detailNextBtn.addEventListener('click',()=>{
+    detail.slideNext(0);
+});
+detailPrevBtn.addEventListener('click',()=>{
+    detail.slidePrev(0);
+});
+
+/* 팝업 */
+const detailProject = document.querySelectorAll('.detail_wrap#detail .swiper-slide');
+console.log(detailProject,popup);
