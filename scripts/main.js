@@ -19,46 +19,59 @@ new Swiper('#redesign-swiper', {
     },
 });
 
-//그래픽디자인
-const sns = new Swiper('.graphic_group .swiper#sns-swiper',{
+
+//graphic
+const sns = new Swiper('#sns-swiper', {
     slidesPerView:4,
     spaceBetween:25,
-    autoplay:{delay:0,},
+    autoplay:{ delay:0 },
     speed:4000,
-    loop:true,
-})
+    loop:true
+});
 
-const bnr = new Swiper('.graphic_group .swiper#banner-swiper',{
+const bnr = new Swiper('#banner-swiper', {
     slidesPerView:4,
     spaceBetween:25,
-    autoplay:{delay:0,},
+    autoplay:{ delay:0 },
     speed:4000,
-    loop:true,
-})
+    loop:true
+});
 
-//SNS 프로젝트 클릭 시 팝업 실행(클릭한 이미지가 팝업 이미지로 교체)
-const snsProject = document.querySelectorAll('#sns-swiper .swiper-slide');
-const bannerProject = document.querySelectorAll('#banner-swiper .swiper-slide');
 const popup = document.querySelector('.popup_bg');
-const popupImg = document.querySelector('.popup_bg .popup img');
-/* 모든슬라이드이미지 */
-const allSlides = document.querySelectorAll('#sns-swiper .swiper-slide img, #banner-swiper .swiper-slide img');
+const popupImg = popup.querySelector('img');
+const allSlides = document.querySelectorAll('#sns-swiper img, #banner-swiper img');
 
-//팝업 열 때
+// 팝업 열기
+function openPopup(src) {
+    popupImg.src = src;
+    popup.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    wrap.mousewheel.disable();
+    sns.mousewheel.disable();
+    bnr.mousewheel.disable();
+}
+
+// 팝업 닫기
+function closePopup() {
+    popup.style.display = 'none';
+    popupImg.src = '';
+    document.body.style.overflow = '';
+    wrap.mousewheel.enable();
+    sns.mousewheel.enable();
+    bnr.mousewheel.enable();
+}
+
+// 이미지 클릭 시 팝업 열기
 allSlides.forEach(img => {
     img.addEventListener('click', () => {
-        const realSrc = img.dataset.popup || img.src;
-        popupImg.src = realSrc;
-        popup.style.display = 'block';
-        wrap.mousewheel.disable();
+        openPopup(img.src);
     });
 });
 
-//popup_bg 닫힘
-popup.addEventListener('click',()=>{
-    popup.style.display='none'
-    wrap.mousewheel.enable();
-})
+// 팝업 클릭 시 닫기
+popup.addEventListener('click', () => {
+    closePopup();
+});
 
 //detail 슬라이드
 const detail = new Swiper('.swiper#detail-swiper',{

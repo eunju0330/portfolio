@@ -5,6 +5,7 @@ html, body {
 }
 #wrap {
     height:100%;
+    min-width:1920px;
 }
 .swiper-slide {
     height:100vh;
@@ -50,7 +51,7 @@ html, body {
     align-items:center;
 }
 .about_wrap .profile_section .profile_info .profile_image {
-    width:310px; height:310px;
+
     position:relative;
 }
 .about_wrap .profile_section .profile_info .profile_image img {
@@ -68,7 +69,7 @@ html, body {
     width:10px; height:10px; background-color:#FFF39F;
     border-radius:50%;
     z-index:20;
-    position:absolute; right:-6px; top:50%;
+    position:absolute; right:-4px; top:50%;
 }
 .about_wrap .profile_section .profile_info .info_section {
     margin-left:96px;
@@ -117,6 +118,7 @@ html, body {
 }
 .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .bubble {
     position:relative;
+    animation:talk 2s ease-out infinite;
 }
 .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .bubble img {}
     
@@ -125,7 +127,7 @@ html, body {
     color:#fff;
 }
 .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .qr {
-    margin-top:20px;
+    margin-top:15px;
 }
 .about_wrap .profile_section .profile_info .info_section .text_wrap .qr_wrap .qr img {}
 /* about 2행 */
@@ -381,7 +383,7 @@ html, body {
     margin-top:80px;
     margin-bottom:87px;
 }
-.redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_image {
+.redesign_wrap#redesign #redesign-swiper .swiper-wrapper .swiper-slide .project .project_image {
 }
 .redesign_wrap#redesign .swiper#redesign-swiper .swiper-wrapper .swiper-slide .project .project_image img {
     width:815px;
@@ -399,7 +401,6 @@ html, body {
 }
 /* 4. GRAPHIC */
 .graphic_wrap#graphic {
-    height:1000px;
     padding:74px 240.5px 143px;
 }
 .graphic_wrap#graphic .graphic_inner {
@@ -427,61 +428,79 @@ html, body {
     font-size:1.25rem;
     margin-bottom:30px;
 }
-.graphic_wrap#graphic .graphic_group .swiper#sns_swiper {}
-.graphic_wrap#graphic .graphic_group .swiper#sns_swiper .swiper-wrapper {
+.graphic_wrap .graphic_inner .graphic_group #sns-swiper {
+    width:1439px;
+    height:380px;
+    background-color:pink;
 }
-.graphic_wrap#graphic .graphic_group .swiper#sns_swiper .swiper-wrapper .swiper-slide {}
-.graphic_wrap#graphic .graphic_group .swiper#sns_swiper .swiper-wrapper .swiper-slide img {}
-.graphic_wrap#graphic .graphic_group .swiper#banner-swiper {}
-.graphic_wrap#graphic .graphic_group .swiper#banner-swiper .swiper-wrapper {}
-.graphic_wrap#graphic .graphic_group .swiper#banner-swiper .swiper-wrapper .swiper-slide {}
-.graphic_wrap#graphic .graphic_group .swiper#banner-swiper .swiper-wrapper .swiper-slide img {}
+#graphic .graphic_group #sns_swiper .swiper-wrapper {
+    
+}
+#graphic .graphic_group #sns_swiper .swiper-wrapper .swiper-slide {
+    overflow: hidden;
+}
+.graphic_wrap .graphic_inner .graphic_group #sns-swiper .swiper-wrapper .swiper-slide img {
+    height:100%;
+    width:100%;
+    border-radius:15px;
+}
+.graphic_wrap .graphic_inner .graphic_group #banner-swiper {
+    width:1439px;
+    height:100px;
+    background-color:red;
+}
+#graphic .graphic_group #banner-swiper .swiper-wrapper {
+}
+#graphic .graphic_group #banner-swiper .swiper-wrapper .swiper-slide {
+}
+#graphic .graphic_group #banner-swiper .swiper-wrapper .swiper-slide img {
+}
 /* 스와이퍼 공통 */
-.graphic_wrap#graphic .graphic_group .swiper {
+#graphic .graphic_group .swiper {
     width:100%;
 }
-.graphic_wrap#graphic .graphic_group .swiper .swiper-wrapper {
+#graphic .graphic_group .swiper .swiper-wrapper {
     transition-timing-function:linear;
     display:flex;
 }
-.graphic_wrap#graphic .graphic_group .swiper .swiper-wrapper .swiper-slide {
-    height:auto;
+#graphic .graphic_group .swiper .swiper-wrapper .swiper-slide {
+    cursor:pointer;
 }
-.graphic_wrap#graphic .graphic_group .swiper .swiper-wrapper .swiper-slide img {
-    display:block;
-    width:100%;
-    height:auto;
+#graphic .graphic_group .swiper .swiper-wrapper .swiper-slide img {
 }
-.graphic_wrap#graphic .graphic_group .swiper {
+#graphic .graphic_group .swiper {
     width:100%;
 }
-.graphic_wrap#graphic .graphic_group .swiper .swiper-wrapper {
+#graphic .graphic_group .swiper .swiper-wrapper {
     display:flex;
 }
-.graphic_wrap#graphic .graphic_group .swiper .swiper-wrapper .swiper-slide {
-    width:auto;
-}
-.graphic_wrap#graphic .graphic_group .swiper .swiper-wrapper .swiper-slide img {
-    display:block;
+#graphic .graphic_group .swiper .swiper-wrapper .swiper-slide {}
+#graphic .graphic_group .swiper .swiper-wrapper .swiper-slide img {
     width:100%;
-    height:auto;
 }
 /* 팝업 */
 .popup_bg {
     position:fixed; left:0; top:0;
     z-index:800;
-    background-color:rgba(0,0,0,0.4);
+    background-color:rgba(0,0,0,0.6);
     height:100vh; width:100%;
-    display:none; /* 초반 숨기기, 부모한테만 설정 */
+    display:none;
 }
 .popup_bg .popup {
     width:700px; margin:60px auto 0;
     height:80vh;
-    overflow:auto;/* 크기를 정하고 나머지는 스크롤을 만들어라라는 뜻으로 auto설정 */
+    overflow:auto;
 }
 .popup_bg .popup img {
     width:100%;
+    height:auto;
 }
+.popup_bg .popup.banner-popup {
+    width:700px; margin:350px auto;
+    height:80vh;
+    overflow:auto;
+}
+
 /* 5. DETAIL */
 .detail_wrap#detail {
     padding:50px 241px 132px;
@@ -531,12 +550,45 @@ html, body {
     position:relative;
 }
 .outro_wrap#outro .outro_inner {
-    background-color:yellowgreen;
     text-align:center;
     position:absolute; top:50%; left:50%; transform:translate(-50% , -50%);
 }
-.outro_wrap#outro .outro_inner img {}
-.outro_wrap#outro .outro_inner h2 {}
-.outro_wrap#outro .outro_inner .thanks {}
-.outro_wrap#outro .outro_inner .subtext {}
-.outro_wrap#outro .outro_inner .subtext strong {}
+.outro_wrap#outro .outro_inner .rotate_sun {
+    animation:rotate 5s linear infinite;
+    margin-bottom:26px;
+}
+.outro_wrap#outro .outro_inner h2 {
+    font-weight:500;
+    font-size:2.188rem;
+    margin-bottom:30px;
+}
+.outro_wrap#outro .outro_inner .thanks {
+    font-weight:300;
+    font-size:1.375rem;
+    margin-bottom:46px;
+}
+.outro_wrap#outro .outro_inner .subtext {
+    font-weight:300;
+    font-size:1.375rem;
+    line-height:2.0;
+}
+.outro_wrap#outro .outro_inner .subtext span {
+    font-family: "ABeeZee", sans-serif;
+}
+.outro_wrap#outro .outro_inner .subtext strong {
+    font-weight:600;
+}
+
+/* 애니메이션 */
+@keyframes rotate {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+
+@keyframes talk {
+    0% { transform: translateY(0); }
+    20% { transform: translateY(-5px); }
+    50% { transform: translateY(0); }
+    80% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
