@@ -295,7 +295,7 @@ html, body {
 }
 #redesign #redesign-swiper .swiper-wrapper .swiper-slide .project {
     display:flex;
-    gap:82px;
+    justify-content:space-between;
     margin-bottom:61px;
 }
 #redesign #redesign-swiper .swiper-wrapper .swiper-slide .project .project_info {}
@@ -373,7 +373,7 @@ html, body {
 }
 #redesign #redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .project_btn {
     display:flex;
-    gap:20px;
+    gap:25px;
 }
 #redesign #redesign-swiper .swiper-wrapper .swiper-slide .project .project_info .project_btn .btn {
     width:140px; height:52px;
@@ -390,7 +390,7 @@ html, body {
 #redesign #redesign-swiper .swiper-wrapper .swiper-slide .project .project_image {
 }
 #redesign #redesign-swiper .swiper-wrapper .swiper-slide .project .project_image img {
-    width:815px;
+    width:735px;
 }
 #redesign #redesign-swiper .swiper-scrollbar {
     position: absolute;
@@ -474,6 +474,10 @@ html, body {
 #graphic .graphic_group .swiper .swiper-wrapper .swiper-slide {
     cursor:pointer;
 }
+#graphic .graphic_group .swiper .swiper-wrapper .swiper-slide:hover {
+    opacity:0.5;
+    transform:rotate(2deg);
+}
 #graphic .graphic_group .swiper .swiper-wrapper .swiper-slide img {
 }
 #graphic .graphic_group .swiper {
@@ -550,6 +554,9 @@ html, body {
 }
 .detail_wrap#detail .detail_group .mockup .swiper#detail-swiper .swiper-wrapper .swiper-slide {
     cursor:pointer;
+}
+.detail_wrap#detail .detail_group .mockup .swiper#detail-swiper .swiper-wrapper .swiper-slide:hover {
+    opacity:0.5;
 }
 .detail_wrap#detail .detail_group .mockup .swiper#detail-swiper .swiper-wrapper .swiper-slide img {
 }
