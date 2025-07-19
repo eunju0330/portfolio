@@ -405,30 +405,31 @@ html, body {
     transition:width 0.3s ease;
 }
 /* 4. GRAPHIC */
-.graphic_wrap#graphic {
+#graphic {
     padding:74px 240.5px 143px;
 }
-.graphic_wrap#graphic .graphic_inner {
+#graphic .graphic_inner {
 }
-.graphic_wrap#graphic .graphic_title {
+#graphic .graphic_title {
     margin-bottom:84px;
     display:flex;
     align-items:center;
     gap:22px;
 }
-.graphic_wrap#graphic .graphic_title h2 {
+#graphic .graphic_title h2 {
     font-size:2.5rem;
     font-weight:600;
 }
-.graphic_wrap#graphic .graphic_title .line {
+#graphic .graphic_title .line {
     width:33px; height:1px; background-color:#000;
 }
-.graphic_wrap#graphic .graphic_title .cat {}
-.graphic_wrap#graphic .graphic_group {
+#graphic .graphic_title .cat {}
+#graphic .graphic_group {
     margin-bottom:46px;
     height:auto;
+    position:relative;
 }
-.graphic_wrap#graphic .graphic_group h3 {
+#graphic .graphic_group h3 {
     font-weight:500;
     font-size:1.25rem;
     margin-bottom:30px;
@@ -499,18 +500,28 @@ html, body {
     display:none;
 }
 .popup_bg .popup {
-    width:700px; margin:60px auto 0;
+    position: absolute;
+    left:50%;
+    top:50%;
+    width:700px;
     height:80vh;
-    overflow:auto;
+    transform: translate(-50%, -50%);
+    overflow:auto; 
+}
+.popup_bg.sns_popup .popup {
+    width:700px;
+    height:80vh;
+}
+.popup_bg.banner_popup .popup {
+    width:700px;
+    height:40vh;
+    top:45%;
+    transform:translateX(-50%);
 }
 .popup_bg .popup img {
+    display:block;
     width:100%;
     height:auto;
-}
-.popup_bg .popup.banner-popup {
-    width:700px; margin:350px auto;
-    height:80vh;
-    overflow:auto;
 }
 
 /* 5. DETAIL */

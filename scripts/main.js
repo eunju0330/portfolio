@@ -21,57 +21,65 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     //graphic
     const sns = new Swiper('#sns-swiper', {
-        slidesPerView:4,
-        spaceBetween:25,
-        autoplay:{ delay:0 },
-        speed:4000,
-        loop:true
+        slidesPerView: 4,
+        spaceBetween: 25,
+        autoplay: { delay: 0 },
+        speed: 4000,
+        loop: true
     });
 
     const bnr = new Swiper('#banner-swiper', {
-        slidesPerView:4,
-        spaceBetween:25,
-        autoplay:{ delay:0 },
-        speed:4000,
-        loop:true
+        slidesPerView: 4,
+        spaceBetween: 25,
+        autoplay: { delay: 0 },
+        speed: 4000,
+        loop: true
     });
 
-    const popup = document.querySelector('.popup_bg');
-    const popupImg = popup.querySelector('img');
-    const allSlides = document.querySelectorAll('#sns-swiper img, #banner-swiper img');
+    const popupSns = document.querySelector('.popup_bg.sns_popup');
+    const popupBnr = document.querySelector('.popup_bg.banner_popup');
+    const popupImgSns = popupSns.querySelector('img');
+    const popupImgBnr = popupBnr.querySelector('img');
+    const snsSlides    = document.querySelectorAll('#sns-swiper img');
+    const bannerSlides = document.querySelectorAll('#banner-swiper img');
 
-    // 팝업 열기
-    function openPopup(src) {
-        popupImg.src = src;
-        popup.style.display = 'block';
+    function openSnsPopup(src) {
+        popupImgSns.src = src;
+        popupSns.style.display = 'block';
         document.body.style.overflow = 'hidden';
         wrap.mousewheel.disable();
         sns.mousewheel.disable();
+    }
+
+    function openBnrPopup(src) {
+        popupImgBnr.src = src;
+        popupBnr.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        wrap.mousewheel.disable();
         bnr.mousewheel.disable();
     }
 
     // 팝업 닫기
-    function closePopup() {
-        popup.style.display = 'none';
-        popupImg.src = '';
+    function closePopup(popupElement, swiperInstance) {
+        popupElement.style.display = 'none';
         document.body.style.overflow = '';
         wrap.mousewheel.enable();
-        sns.mousewheel.enable();
-        bnr.mousewheel.enable();
+        swiperInstance.mousewheel.enable();
     }
 
-    // 이미지 클릭 시 팝업 열기
-    allSlides.forEach(img => {
-        img.addEventListener('click', () => {
-            openPopup(img.src);
-        });
+    // 팝업 열기
+    snsSlides.forEach(img => {
+    img.addEventListener('click', () => openSnsPopup(img.src));
+    });
+    bannerSlides.forEach(img => {
+    img.addEventListener('click', () => openBnrPopup(img.src));
     });
 
     // 팝업 클릭 시 닫기
-    popup.addEventListener('click', () => {
-        closePopup();
-    });
+    popupSns.addEventListener('click', () => closePopup(popupSns, sns));
+    popupBnr.addEventListener('click', () => closePopup(popupBnr, bnr));
 
+    
     //detail
     const detailSwiper = new Swiper('#detail-swiper', {
         loop:true,
