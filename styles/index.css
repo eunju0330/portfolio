@@ -573,8 +573,10 @@ html, body {
 }
 /* 6. OUTRO */
 .outro_wrap#outro {
-    background:url(../images/outro/outro_bg.jpg);
+    background-image:url(../images/outro/outro_bg.jpg);
+    background-repeat:no-repeat;
     height:100vh;
+    width:100%;
     position:relative;
 }
 .outro_wrap#outro .outro_inner {
