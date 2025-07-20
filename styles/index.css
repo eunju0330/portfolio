@@ -188,7 +188,7 @@ html, body {
 .about_wrap .info .info_box .skill_wrap .skill_icons .sk1 {
     margin-bottom:15px;
     display:flex;
-    gap:15px;
+    gap:20px;
 }
 .about_wrap .info .info_box .skill_wrap .skill_icons .sk1 .sk_box {
     display:flex;
@@ -201,7 +201,7 @@ html, body {
 .about_wrap .info .info_box .skill_wrap .skill_icons .sk2 {
     margin-bottom:15px;
     display:flex;
-    gap:15px;
+    gap:20px;
 }
 .about_wrap .info .info_box .skill_wrap .skill_icons .sk2 .sk_box {
     display:flex;
