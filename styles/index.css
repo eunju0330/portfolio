@@ -515,7 +515,7 @@ html, body {
 .popup_bg.banner_popup .popup {
     width:700px;
     height:40vh;
-    top:45%;
+    top:35%;
     transform:translateX(-50%);
 }
 .popup_bg .popup img {
